@@ -1,10 +1,10 @@
+# Exercício 25
+numeros = input('Digite uma lista de números separados por vírgula: ')
+numeros_str = numeros.split(",")
+numeros_int = []
 try:
-    numero_01 = input('Digite um número: ')
-    resultado = numero_01 / 0
-    print(resultado)
-except TypeError as e:
-    print(e) # o código do erro pode entrar num log de erros para ser mapeado posteriormente
-else:
-    print('Código executado sem erros')
-finally:
-    print('Execução finalizada')  
+    for num in numeros_str:
+        numeros_int.append(int(num.strip()))
+    print("Lista de inteiros:", numeros_int)
+except ValueError:
+    print("Erro: certifique-se de que todos os elementos são números inteiros válidos.")
